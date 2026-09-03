@@ -17,6 +17,7 @@ jobs:
         distro:
           - alma8
           - debian125
+          - debiantesting
           - fedora42
           - fedora43
           - fedora44
