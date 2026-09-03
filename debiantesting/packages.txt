@@ -21,6 +21,7 @@ libcfitsio-dev
 libcivetweb-dev
 libcurl4-openssl-dev
 libfcgi-dev
+libedit-dev
 libfftw3-dev
 libfreetype6-dev
 libftgl-dev
@@ -40,6 +41,7 @@ liblz4-dev
 liblzma-dev
 libpcre2-dev
 libpng-dev
+libpolly-22-dev
 libpq-dev
 libprotobuf-dev
 libprotoc-dev
@@ -61,6 +63,7 @@ libxrootd-client-dev
 libxxhash-dev
 libz-dev
 libzstd-dev
+llvm-22
 locales
 make
 ninja-build
