@@ -3,6 +3,7 @@ blas-devel
 ccache
 cfitsio-devel
 clang
+clang-tools-extra
 cmake
 curl
 curl-devel
@@ -60,13 +61,14 @@ protobuf-devel
 pythia8-devel
 python3
 python3-devel
-qt5-doctools
+qt6-doctools
 readline-devel
 redhat-rpm-config
 sqlite-devel
 tbb-devel
 unixODBC-devel
 unuran-devel
+which
 xrootd-client
 xrootd-client-devel
 xxhash-devel

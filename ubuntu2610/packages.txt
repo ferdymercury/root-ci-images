@@ -2,11 +2,12 @@ automake
 binutils
 ca-certificates
 ccache
+civetweb
 cmake
+cppzmq-dev
 curl
 davix-dev
 dcap-dev
-default-jre-headless
 dpkg-dev
 fonts-freefont-ttf
 g++
@@ -16,6 +17,8 @@ git
 graphviz-dev
 libblas-dev
 libcfitsio-dev
+libcivetweb-dev
+libcrypt-dev
 libcurl4-openssl-dev
 libfftw3-dev
 libfreetype6-dev
@@ -57,11 +60,15 @@ libxpm-dev
 libxrootd-client-dev
 libxxhash-dev
 libz-dev
+libzmq3-dev
 libzstd-dev
 locales
+xvfb
+xauth
 make
 ninja-build
 nlohmann-json3-dev
+openjdk-21-jre-headless
 protobuf-compiler
 python3
 python3-dev
@@ -70,7 +77,6 @@ python3-venv
 r-base
 r-cran-rcpp
 r-cran-rinside
-srm-ifce-dev
 uuid-dev
 wget
 xlibmesa-glu-dev

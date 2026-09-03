@@ -6,6 +6,8 @@ blas-devel
 ccache
 cfitsio-devel
 chromium
+civetweb
+civetweb-devel
 cmake
 cppzmq-devel
 curl-devel
@@ -34,6 +36,8 @@ libuuid-devel
 libxml2-devel
 libzstd-devel
 lz4-devel
+xorg-x11-server-Xvfb
+xorg-x11-xauth
 make
 mesa-libGL-devel
 mesa-libGLU-devel
@@ -57,3 +61,4 @@ xxhash-devel
 xz-devel
 zeromq-devel
 zlib-devel
+qt6-qtwebengine-devel

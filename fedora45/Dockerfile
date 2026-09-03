@@ -1,4 +1,4 @@
-FROM fedora:44
+FROM fedora:45
 
 ARG PIP_COOLDOWN=--uploaded-prior-to=P7D
 
@@ -29,10 +29,23 @@ RUN mkdir -p /opt/cef \
 # set shell variable for ROOT build
 ENV CEF_ROOT=/opt/cef/cef_binary_148
 
+# Exclude packages that are not yet available for Python 3.15
+RUN mkdir -p /py-venv
+RUN cat > forbidden.txt <<'EOF'
+jax
+numba
+onnx
+scikit-learn
+scipy
+torch
+xgboost
+EOF
+
 # Install torch directly from pytorch.org to avoid pulling in CUDA
 RUN mkdir -p /py-venv \
+ && grep -v -x -F -f forbidden.txt requirements-root.txt > requirements-root-cleaned.txt \
  && python3 -m venv /py-venv/ROOT-CI \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --upgrade pip \
  && /py-venv/ROOT-CI/bin/pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu torch \
- && /py-venv/ROOT-CI/bin/pip install ${PIP_COOLDOWN} --no-cache-dir -r requirements-root.txt openstacksdk \
- && rm -f requirements-root.txt
+ && /py-venv/ROOT-CI/bin/pip install ${PIP_COOLDOWN} --no-cache-dir -r requirements-root-cleaned.txt openstacksdk \
+ && rm -f requirements-root.txt forbidden.txt requirements-root-cleaned.txt
